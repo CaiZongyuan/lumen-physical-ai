@@ -1,5 +1,6 @@
 .build/
 .workbuddy/
+proto/
 .DS_Store
 Thumbs.db
 node_modules/

@@ -3,8 +3,8 @@
   "short_name": "Lumen",
   "start_url": "/lumen-physical-ai/",
   "display": "standalone",
-  "background_color": "#0C1F1C",
-  "theme_color": "#0C1F1C",
+  "background_color": "#1B4FE0",
+  "theme_color": "#1B4FE0",
   "icons": [
     {
       "src": "icon-192.png",
