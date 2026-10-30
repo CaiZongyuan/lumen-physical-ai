@@ -1584,6 +1584,32 @@ main,.cta,.foot{padding-bottom:34px}
 /* 蓝底反色块段落 */
 .s--sand .shead__lead{color:rgba(255,255,255,.92)}
 
+/* Lab World platform film */
+.platform-film{padding-top:0;max-width:1040px;scroll-margin-top:85px}
+.platform-film__head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:24px;border-top:1px solid var(--line-2);padding-top:22px}
+.platform-film__head .eyebrow{color:var(--blue)}
+.platform-film__title{font-family:var(--display);font-size:clamp(24px,3vw,36px);line-height:1.3;font-weight:900;margin-top:14px;letter-spacing:-.02em}
+.platform-film__intro{font-size:14px;line-height:1.8;color:var(--ink-2);margin-top:12px;max-width:34em}
+.platform-film__meta{font-family:var(--mono);font-size:11px;color:var(--ink-2);white-space:nowrap}
+.platform-film__frame{border:1px solid var(--blue);background:var(--ink)}
+.platform-film__bar{display:flex;justify-content:space-between;gap:12px;padding:11px 16px;background:var(--blue);color:white;font-family:var(--mono);font-size:10px;letter-spacing:.12em}
+.platform-film__bar b{font-weight:500;color:var(--yellow)}
+.platform-film__video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#101010;object-fit:contain}
+.platform-film__player{position:relative}
+.platform-film__play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;border:1px solid rgba(255,255,255,.35);border-radius:50%;background:var(--yellow);color:var(--ink);display:grid;place-items:center;box-shadow:0 4px 22px rgba(0,0,0,.3);transition:background .2s}
+.platform-film__play:hover{background:var(--yellow-2)}
+.platform-film__play:focus-visible{outline:3px solid white;outline-offset:4px}
+.platform-film [hidden]{display:none}
+.platform-film__status{padding:12px 16px;background:var(--paper);color:var(--ink-2);font-size:13px}
+.platform-film__foot{display:flex;justify-content:space-between;gap:8px 24px;flex-wrap:wrap;margin-top:12px;font-size:12px;line-height:1.8;color:var(--ink-2)}
+.platform-film__links{display:flex;gap:20px;flex-wrap:wrap}
+.platform-film__foot a{color:var(--blue);text-decoration:underline;text-underline-offset:3px}
+.platform-film__foot a:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+@media(max-width:600px){
+  .platform-film__head{align-items:start;flex-direction:column;gap:10px}
+  .platform-film__bar{padding:10px 12px;font-size:9px;letter-spacing:.06em}
+  .platform-film__play{width:56px;height:56px}
+}
 </style>
 </head>
 <body>
@@ -1600,6 +1626,7 @@ main,.cta,.foot{padding-bottom:34px}
     </a>
     <nav class="nav__links" aria-label="主导航">
       <a href="#line">流水线</a>
+      <a href="#platform-film">平台演示</a>
       <a href="#anatomy">解剖台</a>
       <a href="#lab">行为沙盘</a>
       <a href="#works">作品</a>
@@ -1629,7 +1656,7 @@ main,.cta,.foot{padding-bottom:34px}
         <a class="btn btn--amber" href="#cta">加入等待名单
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15M12 5l7 7-7 7" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a class="btn btn--ghost" href="#line">看它怎么被造出来</a>
+        <a class="btn btn--ghost" href="#platform-film"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4v16l13-8z"/></svg>观看平台演示</a>
       </div>
       <p class="hero__trust">内测中 · 定价未定 · 首批体验官免平台费</p>
 
@@ -1758,6 +1785,34 @@ main,.cta,.foot{padding-bottom:34px}
         </div>
         <p class="spec__note">量不到的尺寸不会被猜。它先记成一条假设，标在图纸上，等你补一次再修正。</p>
       </aside>
+    </div>
+  </div>
+</section>
+
+<section class="s wrap platform-film" id="platform-film" aria-labelledby="platform-film-title">
+  <div class="platform-film__head">
+    <div>
+      <p class="eyebrow">Lab World / Platform Film</p>
+      <h2 class="platform-film__title" id="platform-film-title">看看 Lab World 如何运转。</h2>
+      <p class="platform-film__intro">场景、设备与智能体，如何在同一个平台里协作。用一支短片，走进 Lab World。</p>
+    </div>
+    <span class="platform-film__meta">中文讲解 · 01:42</span>
+  </div>
+  <div class="platform-film__frame">
+    <div class="platform-film__bar" aria-hidden="true"><span>LAB WORLD <b>/</b> OVERVIEW</span><span>场景 → 设备 → AGENT</span></div>
+    <div class="platform-film__player">
+      <video class="platform-film__video" src="https://media.lumen-physical-ai.top/lab-world-promo-platform-update-zh.webm" controls playsinline preload="none" width="1920" height="1080" poster="assets/lab-world-film.webp" aria-label="Lab World 平台中文介绍视频">
+        您的浏览器无法播放此视频。<a href="https://media.lumen-physical-ai.top/lab-world-promo-platform-update-zh.webm">打开视频</a>。
+      </video>
+      <button class="platform-film__play" type="button" aria-label="播放 Lab World 平台介绍视频" hidden><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 4.5v15l12-7.5z"/></svg></button>
+    </div>
+    <p class="platform-film__status" role="status" hidden>视频暂时无法播放，请通过下方链接直接打开，或稍后重试。</p>
+  </div>
+  <div class="platform-film__foot">
+    <span>点击播放 · 支持全屏观看</span>
+    <div class="platform-film__links">
+      <a href="https://media.lumen-physical-ai.top/lab-world-promo-platform-update-zh.webm" target="_blank" rel="noopener">直接打开 ↗</a>
+      <a class="platform-film__backup" href="https://pub-6d8f23b1806440e89d34541e9d6f10cb.r2.dev/lab-world-promo-platform-update-zh.webm" target="_blank" rel="noopener">备用线路 ↗</a>
     </div>
   </div>
 </section>
@@ -2675,6 +2730,41 @@ main,.cta,.foot{padding-bottom:34px}
 (function(){
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  var film = document.querySelector('.platform-film__video');
+  var filmPlay = document.querySelector('.platform-film__play');
+  var filmBackup = document.querySelector('.platform-film__backup');
+  var filmStatus = document.querySelector('.platform-film__status');
+  if (film && filmPlay && filmBackup && filmStatus) {
+    var backupTried = false;
+    function playFilm(){
+      filmPlay.hidden = true;
+      film.play().catch(function(error){
+        if (error.name !== 'AbortError' && !film.error) filmPlay.hidden = false;
+      });
+    }
+    filmPlay.hidden = false;
+    filmPlay.addEventListener('click', function(){
+      film.focus();
+      playFilm();
+    });
+    film.addEventListener('playing', function(){
+      filmPlay.hidden = true;
+      filmStatus.hidden = true;
+    });
+    film.addEventListener('ended', function(){ filmPlay.hidden = false; });
+    film.addEventListener('error', function(){
+      if (!backupTried) {
+        backupTried = true;
+        film.src = filmBackup.href;
+        film.load();
+        playFilm();
+      } else {
+        filmPlay.hidden = true;
+        filmStatus.hidden = false;
+      }
+    });
+  }
+
   var track = document.getElementById('marquee');
   if (track) track.innerHTML += track.innerHTML;
 
@@ -2779,7 +2869,7 @@ main,.cta,.foot{padding-bottom:34px}
   onScroll();
 
   var rail = document.getElementById('rail');
-  var secs = [].slice.call(document.querySelectorAll('main > section'));
+  var secs = [].slice.call(document.querySelectorAll('main > section:not(.platform-film)'));
   var links = rail ? [].slice.call(rail.querySelectorAll('a')) : [];
   if (rail && secs.length){
     links.forEach(function(a){
